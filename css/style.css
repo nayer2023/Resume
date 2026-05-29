@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7fc;
+    color: #1e2a3e;
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    background: #1a3a5c;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
+
+.btn-pdf {
+    background: #2c7da0;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-pdf:hover {
+    background: #1f6392;
+    transform: translateY(-2px);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+    border-radius: 24px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 2;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a3a5c;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #2c7da0;
+    margin-bottom: 1rem;
+}
+
+.hero-bio {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.badge {
+    background: #e8f0f5;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    color: #1a3a5c;
+    font-weight: 500;
+}
+
+.badge i {
+    margin-right: 6px;
+    color: #2c7da0;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2c7da0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Contact Bar */
+.contact-bar {
+    background: white;
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.contact-bar a {
+    color: #1a3a5c;
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.contact-bar a:hover {
+    color: #2c7da0;
+}
+
+/* Main Grid */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a3a5c;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 3px solid #2c7da0;
+    display: inline-block;
+}
+
+.card-title i {
+    color: #2c7da0;
+    margin-right: 10px;
+}
+
+/* Research Text */
+.research-text {
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+/* Experience Items */
+.exp-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.exp-item:last-child {
+    border-bottom: none;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.exp-header h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e2a3e;
+}
+
+.company {
+    font-size: 0.85rem;
+    color: #2c7da0;
+    font-weight: 500;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: #718096;
+}
+
+.exp-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.exp-list li {
+    font-size: 0.85rem;
+    color: #4a5568;
+    margin-bottom: 0.3rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.exp-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #2c7da0;
+}
+
+/* Education */
+.edu-item {
+    margin-bottom: 1.2rem;
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0.3rem;
+}
+
+.edu-header h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e2a3e;
+}
+
+.edu-date {
+    font-size: 0.75rem;
+    color: #2c7da0;
+    font-weight: 500;
+}
+
+.edu-school {
+    font-size: 0.85rem;
+    color: #718096;
+    margin-bottom: 0.3rem;
+}
+
+.edu-thesis {
+    font-size: 0.8rem;
+    color: #4a5568;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a3a5c;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Skills */
+.skill-category {
+    margin-bottom: 1.2rem;
+}
+
+.skill-category h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1e2a3e;
+    margin-bottom: 0.8rem;
+}
+
+.skill-item {
+    margin-bottom: 0.8rem;
+}
+
+.skill-item span {
+    font-size: 0.8rem;
+    color: #4a5568;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.skill-bar {
+    background: #e2e8f0;
+    height: 6px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    background: #2c7da0;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s;
+}
+
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.tool-tag {
+    background: #e8f0f5;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #1a3a5c;
+    font-weight: 500;
+}
+
+/* Publications */
+.pub-list {
+    list-style: none;
+}
+
+.pub-list li {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: #4a5568;
+}
+
+.pub-list li i {
+    color: #2c7da0;
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+}
+
+/* Awards */
+.award-list, .teaching-list {
+    list-style: none;
+}
+
+.award-list li, .teaching-list li {
+    margin-bottom: 0.8rem;
+    font-size: 0.85rem;
+    color: #4a5568;
+    display: flex;
+    gap: 10px;
+}
+
+.award-list li i {
+    color: #f4a261;
+    width: 20px;
+}
+
+/* Languages */
+.lang-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+}
+
+.lang-item {
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.lang-level {
+    color: #2c7da0;
+    font-weight: 500;
+}
+
+/* References */
+.ref-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.ref-item {
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.ref-item:last-child {
+    border-bottom: none;
+}
+
+.ref-item p {
+    font-size: 0.85rem;
+    color: #4a5568;
+}
+
+.ref-item a {
+    color: #2c7da0;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.ref-item a:hover {
+    text-decoration: underline;
+}
+
+.ref-note {
+    font-size: 0.75rem;
+    color: #718096;
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 0 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+    color: #718096;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .hero-badges {
+        justify-content: center;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    .contact-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+}
